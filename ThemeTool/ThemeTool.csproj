@@ -48,15 +48,19 @@
   <ItemGroup>
     <Reference Include="AvalonDock">
       <HintPath>Refs\AvalonDock.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="AvalonDock.Themes">
       <HintPath>Refs\AvalonDock.Themes.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="ICSharpCode.Core">
-      <HintPath>C:\Program Files %28x86%29\SharpDevelop\4.2\bin\ICSharpCode.Core.dll</HintPath>
+      <HintPath>Refs\ICSharpCode.Core.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ICSharpCode.SharpDevelop">
-      <HintPath>C:\Program Files %28x86%29\SharpDevelop\4.2\bin\ICSharpCode.SharpDevelop.dll</HintPath>
+      <HintPath>Refs\ICSharpCode.SharpDevelop.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
@@ -92,6 +96,8 @@
     <None Include="AddInWritingHelp.txt" />
     <None Include="Refs\AvalonDock.dll" />
     <None Include="Refs\AvalonDock.Themes.dll" />
+    <None Include="Refs\ICSharpCode.Core.dll" />
+    <None Include="Refs\ICSharpCode.SharpDevelop.dll" />
     <None Include="ThemeTool.addin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
