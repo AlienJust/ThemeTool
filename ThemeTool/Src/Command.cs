@@ -116,42 +116,50 @@ namespace ThemeTool
 			}
 		}
 	}
-	public class RegisterEventsCommand : AbstractMenuCommand
+	public class ToolCommandStartup : AbstractMenuCommand
 	{
 		public BackgroundWorker bw;
 		public override void Run()
 		{
-			bw = new BackgroundWorker();
-			bw.DoWork += delegate
+			try
 			{
-				try
+				string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(this.GetType()).Location);
+				System.Reflection.Assembly.LoadFrom(System.IO.Path.Combine(path, "AvalonDock.Themes.dll"));
+				
+				bw = new BackgroundWorker();
+				bw.DoWork += delegate
 				{
-					while (ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow == null)
+					try
 					{
-						Thread.Sleep(100);
+						while (ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow == null)
+						{
+							Thread.Sleep(100);
+						}
+						ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow.Dispatcher.Invoke
+							(DispatcherPriority.Normal, new System.Threading.ThreadStart
+							 (
+							 	delegate
+							 	{
+							 		//string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(typeof(ToolSettings)).Location);
+							 		//string uri = "/AvalonDock.Themes;component/themes/dev2010.xaml";
+							 		//ThemeFactory.ChangeTheme(new Uri(uri, UriKind.RelativeOrAbsolute));
+							 		var settings = new ToolSettings();
+							 		var theme = settings.LoadSettings();
+							 		settings.SetTheme(theme);
+							 	}
+							 )
+							);
 					}
-					ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow.Dispatcher.Invoke
-						(DispatcherPriority.Normal, new System.Threading.ThreadStart
-						 (
-						 	delegate
-						 	{
-						 		string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(typeof(RegisterEventsCommand)).Location);
-						 		System.Reflection.Assembly.LoadFrom(System.IO.Path.Combine(path, "AvalonDock.Themes.dll"));
-						 		//string uri = "/AvalonDock.Themes;component/themes/dev2010.xaml";
-						 		//ThemeFactory.ChangeTheme(new Uri(uri, UriKind.RelativeOrAbsolute));
-						 		var settings = new ToolSettings();
-						 		var theme = settings.LoadSettings();
-						 		settings.SetTheme(theme);
-						 	}
-						 )
-						);
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show(ex.ToString(), "RegisterEventsCommand.Run()");
-				}
-			};
-			bw.RunWorkerAsync();
+					catch (Exception ex)
+					{
+						MessageBox.Show(ex.ToString(), "RegisterEventsCommand.Run()");
+					}
+				};
+				bw.RunWorkerAsync();
+			}
+			catch
+			{
+			}
 		}
 	}
 }

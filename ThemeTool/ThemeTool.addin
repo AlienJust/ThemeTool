@@ -12,8 +12,8 @@
 	</Runtime>
 	
 	<Path name = "/Workspace/Autostart">
-		<Class id = "RegisterEventsCommand"
-		       class = "ThemeTool.RegisterEventsCommand"/>
+		<Class id = "ThemeToolCommandStartup"
+		       class = "ThemeTool.ToolCommandStartup"/>
 	</Path>
 	
 	<Path name = "/Workspace/Tools">
