@@ -1,0 +1,69 @@
+﻿<AddIn name        = "ThemeTool"
+       author      = "AJ01"
+       url         = "skype://AlienJust"
+       description = "Themes For AvalonDock">
+	
+	<Manifest>
+		<Identity name = "ThemeToolAddIn"/>
+	</Manifest>
+	
+	<Runtime>
+		<Import assembly = "ThemeTool.dll"/>
+	</Runtime>
+	
+	<Path name = "/Workspace/Autostart">
+		<Class id = "RegisterEventsCommand"
+		       class = "ThemeTool.RegisterEventsCommand"/>
+	</Path>
+	
+	<Path name = "/Workspace/Tools">
+		<MenuItem id="ThemeToolsRoot" label="Theme Tool" type="Menu">
+			<MenuItem id = "ThemeToolCommandDefault"
+			          label = "Default"
+			          class = "ThemeTool.ToolCommandDefault"/>
+			<MenuItem id = "ThemeToolCommandGeneric"
+			          label = "Generic"
+			          class = "ThemeTool.ToolCommandGeneric"/>
+			<MenuItem type="Separator"/>
+			
+			
+			
+			<MenuItem id = "ThemeToolCommandClassic"
+			          label = "Classic"
+			          class = "ThemeTool.ToolCommandClassic"/>
+			<MenuItem id = "ThemeToolCommandAero"
+			          label = "Aero"
+			          class = "ThemeTool.ToolCommandAero"/>
+			<MenuItem id = "ThemeToolCommandLuna"
+			          label = "Luna"
+			          class = "ThemeTool.ToolCommandLuna"/>
+			<MenuItem type="Separator"/>
+			
+			
+			
+			<MenuItem id = "ThemeToolCommandAutumn"
+			          label = "Autumn"
+			          class = "ThemeTool.ToolCommandAutumn"/>
+			<MenuItem id = "ThemeToolCommandGrass"
+			          label = "Grass"
+			          class = "ThemeTool.ToolCommandGrass"/>
+			<MenuItem type="Separator"/>
+			
+			
+			
+			<MenuItem id = "ThemeToolCommandDev10"
+			          label = "Dev 2010"
+			          class = "ThemeTool.ToolCommandDev10"/>
+			<MenuItem id = "ThemeToolCommandExpressDark"
+			          label = "Expression Dark"
+			          class = "ThemeTool.ToolCommandExpressDark"/>
+			<MenuItem type="Separator"/>
+			
+			
+			
+		<MenuItem id = "ThemeToolCommandCustom"
+			          label = "Custom..."
+			          class = "ThemeTool.ToolCommandCustom"/>
+		</MenuItem>
+	</Path>
+</AddIn>
