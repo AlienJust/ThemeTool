@@ -94,10 +94,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="AddInWritingHelp.txt" />
+    <None Include="Refs\4.1\ICSharpCode.Core.dll" />
+    <None Include="Refs\4.1\ICSharpCode.SharpDevelop.dll" />
+    <None Include="Refs\4.2\ICSharpCode.Core.dll" />
+    <None Include="Refs\4.2\ICSharpCode.SharpDevelop.dll" />
     <None Include="Refs\AvalonDock.dll" />
     <None Include="Refs\AvalonDock.Themes.dll" />
     <None Include="Refs\ICSharpCode.Core.dll" />
     <None Include="Refs\ICSharpCode.SharpDevelop.dll" />
+    <None Include="Refs\Readme.txt" />
     <None Include="ThemeTool.addin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -109,6 +114,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Refs" />
+    <Folder Include="Refs\4.1" />
+    <Folder Include="Refs\4.2" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>

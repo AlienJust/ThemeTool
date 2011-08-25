@@ -152,7 +152,7 @@ namespace ThemeTool
 					}
 					catch (Exception ex)
 					{
-						MessageBox.Show(ex.ToString(), "RegisterEventsCommand.Run()");
+						MessageBox.Show(ex.ToString(), "ToolCommandStartup.Run()");
 					}
 				};
 				bw.RunWorkerAsync();
