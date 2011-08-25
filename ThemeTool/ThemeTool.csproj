@@ -55,12 +55,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ICSharpCode.Core">
-      <HintPath>Refs\ICSharpCode.Core.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>Refs\4.2\ICSharpCode.Core.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpDevelop">
-      <HintPath>Refs\ICSharpCode.SharpDevelop.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>Refs\4.2\ICSharpCode.SharpDevelop.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
@@ -94,15 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="AddInWritingHelp.txt" />
-    <None Include="Refs\4.1\ICSharpCode.Core.dll" />
-    <None Include="Refs\4.1\ICSharpCode.SharpDevelop.dll" />
-    <None Include="Refs\4.2\ICSharpCode.Core.dll" />
-    <None Include="Refs\4.2\ICSharpCode.SharpDevelop.dll" />
-    <None Include="Refs\AvalonDock.dll" />
-    <None Include="Refs\AvalonDock.Themes.dll" />
-    <None Include="Refs\ICSharpCode.Core.dll" />
-    <None Include="Refs\ICSharpCode.SharpDevelop.dll" />
-    <None Include="Refs\Readme.txt" />
     <None Include="ThemeTool.addin">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -111,11 +100,6 @@
     <Compile Include="Configuration\AssemblyInfo.cs" />
     <Compile Include="Src\Command.cs" />
     <Compile Include="Src\ToolSettings.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Refs" />
-    <Folder Include="Refs\4.1" />
-    <Folder Include="Refs\4.2" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
