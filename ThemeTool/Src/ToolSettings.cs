@@ -66,6 +66,11 @@ namespace ThemeTool
 					string uri = "/AvalonDock.Themes;component/themes/dev2010.xaml";
 					ThemeFactory.ChangeTheme(new Uri(uri, UriKind.RelativeOrAbsolute));
 				}
+				else if (themeName == "dev2010green")
+				{
+					string uri = "/AvalonDock.Themes;component/themes/dev2010green.xaml";
+					ThemeFactory.ChangeTheme(new Uri(uri, UriKind.RelativeOrAbsolute));
+				}
 				else if (themeName == "ExpressionDark")
 				{
 					string uri = "/AvalonDock.Themes;component/themes/ExpressionDark.xaml";

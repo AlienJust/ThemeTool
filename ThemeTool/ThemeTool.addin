@@ -54,6 +54,9 @@
 			<MenuItem id = "ThemeToolCommandDev10"
 			          label = "Dev 2010"
 			          class = "ThemeTool.ToolCommandDev10"/>
+			<MenuItem id = "ThemeToolCommandDev10Green"
+			          label = "Dev 2010 Green"
+			          class = "ThemeTool.ToolCommandDev10Green"/>
 			<MenuItem id = "ThemeToolCommandExpressDark"
 			          label = "Expression Dark"
 			          class = "ThemeTool.ToolCommandExpressDark"/>

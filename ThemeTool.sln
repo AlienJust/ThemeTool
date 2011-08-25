@@ -4,6 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # SharpDevelop 4.2.0.7891-alpha
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThemeTool", "ThemeTool\ThemeTool.csproj", "{FDA7E9A0-BCD6-40FF-9DE6-2438DD6638FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvalonDock.Themes", "AvalonDock.Themes\AvalonDock.Themes.csproj", "{3836F4A8-4B35-4F5E-BB0F-DAD374297525}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -20,5 +22,13 @@ Global
 		{FDA7E9A0-BCD6-40FF-9DE6-2438DD6638FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FDA7E9A0-BCD6-40FF-9DE6-2438DD6638FB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FDA7E9A0-BCD6-40FF-9DE6-2438DD6638FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3836F4A8-4B35-4F5E-BB0F-DAD374297525}.Debug|x86.Build.0 = Debug|Any CPU
+		{3836F4A8-4B35-4F5E-BB0F-DAD374297525}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3836F4A8-4B35-4F5E-BB0F-DAD374297525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3836F4A8-4B35-4F5E-BB0F-DAD374297525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3836F4A8-4B35-4F5E-BB0F-DAD374297525}.Release|x86.Build.0 = Release|Any CPU
+		{3836F4A8-4B35-4F5E-BB0F-DAD374297525}.Release|x86.ActiveCfg = Release|Any CPU
+		{3836F4A8-4B35-4F5E-BB0F-DAD374297525}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3836F4A8-4B35-4F5E-BB0F-DAD374297525}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 EndGlobal

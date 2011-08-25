@@ -91,6 +91,15 @@ namespace ThemeTool
 			settings.SaveSettings("dev2010");
 		}
 	}
+	public class ToolCommandDev10Green : AbstractMenuCommand
+	{
+		public override void Run()
+		{
+			var settings = new ToolSettings();
+			settings.SetTheme("dev2010green");
+			settings.SaveSettings("dev2010green");
+		}
+	}
 	public class ToolCommandExpressDark : AbstractMenuCommand
 	{
 		public override void Run()

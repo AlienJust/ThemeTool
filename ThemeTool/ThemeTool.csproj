@@ -47,18 +47,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AvalonDock">
-      <HintPath>Refs\AvalonDock.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="AvalonDock.Themes">
-      <HintPath>Refs\AvalonDock.Themes.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\Refs\AvalonDock.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.Core">
-      <HintPath>Refs\4.2\ICSharpCode.Core.dll</HintPath>
+      <HintPath>..\Refs\4.1\ICSharpCode.Core.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpDevelop">
-      <HintPath>Refs\4.2\ICSharpCode.SharpDevelop.dll</HintPath>
+      <HintPath>..\Refs\4.1\ICSharpCode.SharpDevelop.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
@@ -100,6 +95,12 @@
     <Compile Include="Configuration\AssemblyInfo.cs" />
     <Compile Include="Src\Command.cs" />
     <Compile Include="Src\ToolSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AvalonDock.Themes\AvalonDock.Themes.csproj">
+      <Project>{3836F4A8-4B35-4F5E-BB0F-DAD374297525}</Project>
+      <Name>AvalonDock.Themes</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
 </Project>
