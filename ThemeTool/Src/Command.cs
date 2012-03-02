@@ -100,6 +100,15 @@ namespace ThemeTool
 			settings.SaveSettings("dev2010green");
 		}
 	}
+	public class ToolCommandDev10Red : AbstractMenuCommand
+	{
+		public override void Run()
+		{
+			var settings = new ToolSettings();
+			settings.SetTheme("dev2010red");
+			settings.SaveSettings("dev2010red");
+		}
+	}
 	public class ToolCommandExpressDark : AbstractMenuCommand
 	{
 		public override void Run()
@@ -107,6 +116,15 @@ namespace ThemeTool
 			var settings = new ToolSettings();
 			settings.SetTheme("ExpressionDark");
 			settings.SaveSettings("ExpressionDark");
+		}
+	}
+	public class ToolCommandExpressLight : AbstractMenuCommand
+	{
+		public override void Run()
+		{
+			var settings = new ToolSettings();
+			settings.SetTheme("ExpressionLight");
+			settings.SaveSettings("ExpressionLight");
 		}
 	}
 	public class ToolCommandCustom : AbstractMenuCommand

@@ -71,9 +71,19 @@ namespace ThemeTool
 					string uri = "/AvalonDock.Themes;component/themes/dev2010green.xaml";
 					ThemeFactory.ChangeTheme(new Uri(uri, UriKind.RelativeOrAbsolute));
 				}
+				else if (themeName == "dev2010red")
+				{
+					string uri = "/AvalonDock.Themes;component/themes/dev2010red.xaml";
+					ThemeFactory.ChangeTheme(new Uri(uri, UriKind.RelativeOrAbsolute));
+				}
 				else if (themeName == "ExpressionDark")
 				{
 					string uri = "/AvalonDock.Themes;component/themes/ExpressionDark.xaml";
+					ThemeFactory.ChangeTheme(new Uri(uri, UriKind.RelativeOrAbsolute));
+				}
+				else if (themeName == "ExpressionLight")
+				{
+					string uri = "/AvalonDock.Themes;component/themes/ExpressionLight.xaml";
 					ThemeFactory.ChangeTheme(new Uri(uri, UriKind.RelativeOrAbsolute));
 				}
 				else if (themeName == "classic" || themeName == "generic" || themeName == "luna.normalcolor" || themeName == "aero.normalcolor")
