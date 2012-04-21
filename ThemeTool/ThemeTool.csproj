@@ -51,11 +51,11 @@
     </Reference>
     <Reference Include="ICSharpCode.Core, Version=4.0.1.7167, Culture=neutral, PublicKeyToken=f829da5c02be14ee, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Refs\4.0\ICSharpCode.Core.dll</HintPath>
+      <HintPath>..\Refs\5.0\ICSharpCode.Core.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpDevelop, Version=4.0.1.7167, Culture=neutral, PublicKeyToken=f829da5c02be14ee, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Refs\4.0\ICSharpCode.SharpDevelop.dll</HintPath>
+      <HintPath>..\Refs\5.0\ICSharpCode.SharpDevelop.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
