@@ -11,12 +11,12 @@
 		<Import assembly = "ThemeTool.dll"/>
 	</Runtime>
 	
-	<Path name = "/Workspace/Autostart">
+	<Path name = "/SharpDevelop/Autostart">
 		<Class id = "ThemeToolCommandStartup"
 		       class = "ThemeTool.ToolCommandStartup"/>
 	</Path>
 	
-	<Path name = "/Workspace/Tools">
+	<Path name = "/SharpDevelop/Workbench/MainMenu/Tools">
 		<MenuItem id="ThemeToolsRoot" label="Theme Tool" type="Menu">
 			<MenuItem id = "ThemeToolCommandDefault"
 			          label = "Default"
