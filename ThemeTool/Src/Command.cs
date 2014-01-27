@@ -3,18 +3,14 @@
  * Date: 24.08.2011
  * Time: 0:39
  */
+ 
 using System;
 using System.ComponentModel;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using System.Windows.Media;
 using System.Windows.Threading;
 
-using AvalonDock;
 using ICSharpCode.Core;
-using ICSharpCode.SharpDevelop;
-using ICSharpCode.SharpDevelop.Gui;
 
 namespace ThemeTool
 {
@@ -131,7 +127,7 @@ namespace ThemeTool
 	{
 		public override void Run()
 		{
-			var colorDialog = new System.Windows.Forms.ColorDialog();
+			var colorDialog = new ColorDialog();
 			var result = colorDialog.ShowDialog();
 			if (result == DialogResult.OK)
 			{
@@ -150,7 +146,7 @@ namespace ThemeTool
 		{
 			try
 			{
-				string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(this.GetType()).Location);
+				string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(GetType()).Location);
 				System.Reflection.Assembly.LoadFrom(System.IO.Path.Combine(path, "AvalonDock.Themes.dll"));
 				
 				bw = new BackgroundWorker();
@@ -158,18 +154,17 @@ namespace ThemeTool
 				{
 					try
 					{
+						// TODO: if i replace code below as compiler says (Warning CS0618: 'ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow' is obsolete: 'Use SD.Workbench.MainWindow instead')
+						// i've got error on startup command (something about #D inner services)
 						while (ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow == null)
 						{
 							Thread.Sleep(100);
 						}
 						ICSharpCode.SharpDevelop.Gui.WorkbenchSingleton.MainWindow.Dispatcher.Invoke
-							(DispatcherPriority.Normal, new System.Threading.ThreadStart
+							(DispatcherPriority.Normal, new ThreadStart
 							 (
 							 	delegate
 							 	{
-							 		//string path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetAssembly(typeof(ToolSettings)).Location);
-							 		//string uri = "/AvalonDock.Themes;component/themes/dev2010.xaml";
-							 		//ThemeFactory.ChangeTheme(new Uri(uri, UriKind.RelativeOrAbsolute));
 							 		var settings = new ToolSettings();
 							 		var theme = settings.LoadSettings();
 							 		settings.SetTheme(theme);
@@ -179,13 +174,14 @@ namespace ThemeTool
 					}
 					catch (Exception ex)
 					{
-						MessageBox.Show(ex.ToString(), "ToolCommandStartup.Run()");
+						MessageBox.Show(ex.ToString(), "ThemeTool Startup Error");
 					}
 				};
 				bw.RunWorkerAsync();
 			}
-			catch
+			catch (Exception ex)
 			{
+				MessageBox.Show(ex.ToString(), "ThemeTool Startup Error");
 			}
 		}
 	}

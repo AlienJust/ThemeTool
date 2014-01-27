@@ -1,6 +1,6 @@
 ﻿<AddIn name        = "ThemeTool"
        author      = "AJ01"
-       url         = "skype://AlienJust"
+       url         = "https://github.com/AlienJust/ThemeTool"
        description = "Themes For AvalonDock">
 	
 	<Manifest>
@@ -16,7 +16,7 @@
 		       class = "ThemeTool.ToolCommandStartup"/>
 	</Path>
 	
-	<Path name = "/SharpDevelop/Workbench/MainMenu/Tools">
+	<Path name = "/SharpDevelop/Workbench/Tools">
 		<MenuItem id="ThemeToolsRoot" label="Theme Tool" type="Menu">
 			<MenuItem id = "ThemeToolCommandDefault"
 			          label = "Default"

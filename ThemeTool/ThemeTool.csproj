@@ -29,6 +29,7 @@
     <Optimize>False</Optimize>
     <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -52,13 +53,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AvalonDock">
-      <HintPath>..\..\..\Portable\SharpDevelop\bin\AvalonDock.dll</HintPath>
+      <HintPath>..\Refs\AvalonDock.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.Core">
-      <HintPath>..\..\..\Portable\SharpDevelop\bin\ICSharpCode.Core.dll</HintPath>
+      <HintPath>..\Refs\ICSharpCode.Core.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpDevelop">
-      <HintPath>..\..\..\Portable\SharpDevelop\bin\ICSharpCode.SharpDevelop.dll</HintPath>
+      <HintPath>..\Refs\ICSharpCode.SharpDevelop.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore">
       <RequiredTargetFramework>3.0</RequiredTargetFramework>
@@ -93,7 +94,7 @@
   <ItemGroup>
     <None Include="AddInWritingHelp.txt" />
     <None Include="ThemeTool.addin">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>

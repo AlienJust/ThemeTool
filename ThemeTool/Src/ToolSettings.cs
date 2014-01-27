@@ -10,6 +10,7 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 
+using System.Windows.Forms;
 using AvalonDock;
 
 namespace ThemeTool
@@ -30,14 +31,18 @@ namespace ThemeTool
 			string result = string.Empty;
 			try
 			{
-				using (var sr = new StreamReader(Path.Combine(AssemblyFolderName, SettingsFileName)))
+				var settingsFileName= Path.Combine(AssemblyFolderName, SettingsFileName);
+				if (File.Exists(settingsFileName))
 				{
-					result = sr.ReadLine();
+					using (var sr = new StreamReader(settingsFileName))
+					{
+						result = sr.ReadLine();
+					}
 				}
 			}
-			catch// (Exception ex)
+			catch (Exception ex)
 			{
-				//System.Windows.Forms.MessageBox.Show(ex.ToString());
+				MessageBox.Show("There was some error during loading settings:" + Environment.NewLine + ex, "ThemeTool Error");
 			}
 			return result;
 		}
@@ -51,9 +56,9 @@ namespace ThemeTool
 					sw.WriteLine(themeName);
 				}
 			}
-			catch// (Exception ex)
+			catch (Exception ex)
 			{
-				//System.Windows.Forms.MessageBox.Show(ex.ToString());
+				MessageBox.Show("There was some error during saving settings:" + Environment.NewLine + ex, "ThemeTool Error");
 			}
 		}
 		
@@ -104,9 +109,9 @@ namespace ThemeTool
 					ThemeFactory.ResetTheme();
 				}
 			}
-			catch// (Exception ex)
+			catch (Exception ex)
 			{
-				//System.Windows.Forms.MessageBox.Show(ex.ToString(), "At ToolSettings.SetTheme()");
+				MessageBox.Show("There was some error during applying theme:" + Environment.NewLine + ex, "ThemeTool Error");
 			}
 		}
 	}
